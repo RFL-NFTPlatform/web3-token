@@ -1,4 +1,4 @@
-declare module "web3-token" {
+declare module "@RFL-NFTPlatform/web3-token" {
   type Signer = (msg: string) => PromiseLike<string>;
 
   interface VerifyOpts {
@@ -11,6 +11,7 @@ declare module "web3-token" {
     statement?: string;
     nonce?: string;
     request_id?: string;
+    wallet_type?: string;
   }
   interface VerifyBody extends Record<string, string | string[]> {
     domain?: string;

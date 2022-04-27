@@ -1,14 +1,14 @@
 {
-  "name": "web3-token",
-  "version": "0.2.7",
-  "private": false,
+  "name": "@RFL-NFTPlatform/web3-token",
+  "version": "1.0.3",
   "description": "Web3 Token is a new way to authenticate users in hybrid dApps using signed messages. Implementation of EIP-4361",
-  "author": "bytesbay",
+  "author": "rfox",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib src/lib.js && cp src/lib.d.ts dist/web3-token.d.ts",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prepublishOnly": "rm -rf dist && npm run build"
   },
   "main": "dist/web3-token.common.js",
   "types": "dist/web3-token.d.ts",
@@ -77,10 +77,6 @@
     "last 2 versions",
     "not dead"
   ],
-  "bugs": {
-    "url": "https://github.com/bytesbay/web3-token/issues"
-  },
-  "homepage": "https://github.com/bytesbay/web3-token#readme",
   "keywords": [
     "auth",
     "token",
@@ -89,9 +85,5 @@
     "web3",
     "blockchain"
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bytesbay/web3-token.git"
-  }
+  "license": "MIT"
 }
